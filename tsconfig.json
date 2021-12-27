@@ -9,7 +9,7 @@
     "skipLibCheck": true
   },
   "exclude": [
-    "./tests/",
+    "./test/",
     "./node_modules/",
     "./dist/"
   ]

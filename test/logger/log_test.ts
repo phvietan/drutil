@@ -18,5 +18,6 @@ describe('Test log', () => {
     log('Hello from test log', writeStream);
     const logContent = fs.readFileSync(__dirname + '/test.log', 'utf-8');
     assert(logContent.includes('Hello from test log'));
+    fs.unlinkSync(__dirname + '/test.log');
   });
 });
