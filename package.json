@@ -1,12 +1,12 @@
 {
   "name": "@drstrain/drutil",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Util for drstrain",
   "main": "dist/index.js",
   "scripts": {
     "test": "ts-mocha ./test/**/*_test.ts",
     "start:dev": "nodemon .",
-    "build": "tsc"
+    "build": "rm -rf dist && tsc"
   },
   "keywords": [],
   "author": "drstrain",
