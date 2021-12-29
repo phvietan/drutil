@@ -8,7 +8,7 @@ describe('Test formatDate', () => {
     const time = '2021-12-26T06:29:33.387Z';
     const date = new Date(time);
     const formatted = formatDate(date);
-    assert(formatted === '26-12-2021 14:29');
+    assert(formatted === '26-12-2021 6:29');
   });
 });
 
