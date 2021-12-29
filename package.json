@@ -6,9 +6,14 @@
   "scripts": {
     "test": "ts-mocha ./test/**/*_test.ts",
     "start:dev": "nodemon .",
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc",
+    "generate-docs": "ts-readme src/**/*.ts"
   },
-  "keywords": ["utilities","drstrain","helper"],
+  "keywords": [
+    "utilities",
+    "drstrain",
+    "helper"
+  ],
   "author": "drstrain",
   "license": "ISC",
   "devDependencies": {
