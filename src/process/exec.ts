@@ -3,6 +3,7 @@ import {spawn} from 'child_process';
 export type ProcessResult = {
   stdout: string;
   stderr: string;
+  err?: Error;
   code: number;
 }
 
@@ -24,6 +25,7 @@ export async function exec(
 
     proc.stdout.on('data', (data) => stdout += data);
     proc.stderr.on('data', (data) => stderr += data);
+
     proc.on('close', (code) => {
       resolve({
         stdout,
@@ -31,6 +33,12 @@ export async function exec(
         code: code || 0,
       });
     });
+    proc.on('error', (err) => resolve({
+      err,
+      stdout,
+      stderr,
+      code: 0,
+    }));
   });
 }
 

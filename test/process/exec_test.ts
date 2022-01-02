@@ -10,4 +10,10 @@ describe('Test exec', () => {
     const t = execSync('ls -la').toString('utf-8');
     assert(res.stdout === t);
   });
+
+  it('should throw error when run unspecified command', async () => {
+    const {err} = await exec('wtfnotspecified', ['-la']);
+    assert(err !== undefined);
+    assert((err as any).code === 'ENOENT');
+  });
 });
