@@ -17,7 +17,7 @@ yarn add @drstrain/drutil
 
 ## Documentations
 
-[TODO](https://docs.drstra.in/@drstrain/drutil)
+[https://stc.drstra.in/drutil/index.html](https://stc.drstra.in/drutil/index.html)
 
 ## Example usage
 
