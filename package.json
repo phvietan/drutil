@@ -32,9 +32,6 @@
   "directories": {
     "test": "test"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phvietan/drutil.git"
@@ -42,8 +39,5 @@
   "bugs": {
     "url": "https://github.com/phvietan/drutil/issues"
   },
-  "homepage": "https://github.com/phvietan/drutil#readme",
-  "dependencies": {
-    "typedoc": "^0.22.10"
-  }
+  "homepage": "https://github.com/phvietan/drutil#readme"
 }
