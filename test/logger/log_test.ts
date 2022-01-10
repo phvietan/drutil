@@ -11,15 +11,9 @@ describe('Test log', () => {
   });
 
   it('should log to file', () => {
-    const writeStream = fs.createWriteStream(
-        __dirname + '/test.log',
-        {flags: 'w'},
-    );
-    log('Hello from test log', writeStream);
-    writeStream.close(() => {
-      const logContent = fs.readFileSync(__dirname + '/test.log', 'utf-8');
-      assert(logContent.includes('Hello from test log'));
-      fs.unlinkSync(__dirname + '/test.log');
-    });
+    log('Hello from test log', __dirname + '/test.log');
+    const logContent = fs.readFileSync(__dirname + '/test.log', 'utf-8');
+    assert(logContent.includes('Hello from test log'));
+    fs.unlinkSync(__dirname + '/test.log');
   });
 });

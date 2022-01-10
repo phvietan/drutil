@@ -16,4 +16,9 @@ describe('Test exec', () => {
     assert(err !== undefined);
     assert((err as any).code === 'ENOENT');
   });
+
+  it('should throw error when run unspecified command', async () => {
+    const u = await exec('id', ['renew']);
+    console.log(u);
+  });
 });
