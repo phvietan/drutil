@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "ts-mocha ./test/**/*_test.ts",
-    "start:dev": "nodemon .",
     "build": "rm -rf dist && tsc && rm -rf node_modules",
     "generate-docs": "typedoc src"
   },
