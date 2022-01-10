@@ -1,3 +1,5 @@
-src
+docs
 test
 pump_version.js
+copy_docs.sh
+.eslintrc.js
