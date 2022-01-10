@@ -1,6 +1,6 @@
 {
   "name": "@drstrain/drutil",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Util for drstrain",
   "main": "dist/index.js",
   "scripts": {
