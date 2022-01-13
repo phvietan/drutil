@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {formatDate, getNumDaysDifference} from '../../src/date/dateUtil';
+import { formatDate, getNumDaysDifference } from '../../src/date/dateUtil';
 
 const assert = chai.assert;
 
@@ -8,7 +8,7 @@ describe('Test formatDate', () => {
     const time = '2021-12-26T06:29:33.387Z';
     const date = new Date(time);
     const formatted = formatDate(date);
-    assert(formatted === '26-12-2021 6:29');
+    assert(formatted.slice(0, 10) === '26-12-2021');
   });
 });
 

@@ -1,4 +1,4 @@
-import {spawn} from 'child_process';
+import { spawn } from 'child_process';
 
 export type ProcessResult = {
   stdout: string;
@@ -14,8 +14,8 @@ export type ProcessResult = {
  * @return {Promise<ProcessResult>} - Return result of { stdout, stderr, code }
  */
 export async function exec(
-    command: string,
-    args: string[] = [],
+  command: string,
+  args: string[] = [],
 ): Promise<ProcessResult> {
   return new Promise<ProcessResult>((resolve) => {
     const proc = spawn(command, args);

@@ -1,4 +1,4 @@
-import {isHex} from '../type/isHex';
+import { isHex } from '../type/isHex';
 
 /**
  * Convert string hex to string ascii

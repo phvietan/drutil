@@ -1,5 +1,5 @@
 import fs from 'fs';
-import {formatDate} from '../date';
+import { formatDate } from '../date';
 
 /**
  * Log message to stdout or optionally a file

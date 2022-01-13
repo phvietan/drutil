@@ -1,4 +1,4 @@
-import {isString} from './typeCheck';
+import { isString } from './typeCheck';
 
 /**
  * Check if param is hex string or not

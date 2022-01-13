@@ -1,6 +1,6 @@
 import fs from 'fs';
-import {COLORS} from './colors';
-import {formatDate} from '../date';
+import { COLORS } from './colors';
+import { formatDate } from '../date';
 
 /**
  * Log red error message to stdout or optionally a file

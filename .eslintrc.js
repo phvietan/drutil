@@ -16,5 +16,7 @@ module.exports = {
   ],
   'rules': {
     'max-len': 0,
+    'object-curly-spacing': ['error', 'always'],
+    'indent': ['error', 2],
   },
 };
