@@ -7,14 +7,13 @@ const rl = readline.createInterface({
 
 /**
  * Ask user and get user's input from stdin
- * @param {string} question - Question to be appeared before promt user's input
+ * @param {?string} question - Optional question to be appeared before promt user's input
  * @return {Promise<string>} - User's input
  */
-export async function read(question: string): Promise<string> {
+export async function read(q?: string): Promise<string> {
   return new Promise<string>((resolve) => {
-    rl.question(question.trim() + '\n > ', function (answer) {
-      resolve(answer);
-    });
+    const question = q ? q.trim() + '\n> ' : '> ';
+    rl.question(question, answer => resolve(answer));
   });
 }
 
