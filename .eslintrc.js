@@ -18,5 +18,6 @@ module.exports = {
     'max-len': 0,
     'object-curly-spacing': ['error', 'always'],
     'indent': ['error', 2],
+    'space-before-function-paren': 0,
   },
 };

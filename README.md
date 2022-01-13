@@ -3,7 +3,8 @@
 Utility functions that is frequently used by me (Drstrain) and has following features:
 - Zero dependency
 - Typescript supported
-- 100% test coverage
+- Over 90% test coverage
+- Over 20 common functionalities (random, sleep, read from user's input, crypto hash, hmac, log, etc)
 
 ## Install
 
