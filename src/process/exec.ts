@@ -8,7 +8,7 @@ export type ProcessResult = {
 }
 
 /**
- * Run new process as async with specified arguments
+ * Run new process as async with specified arguments, and return stdout, stderr, code
  * @param {string} command - Command string
  * @param {string[]} args - Arguments for command
  * @return {Promise<ProcessResult>} - Return result of { stdout, stderr, code }
@@ -40,5 +40,16 @@ export async function exec(
       code: 0,
     }));
   });
+}
+
+/**
+ * Run new process as async with string command only, and return stdout, stderr, code
+ * @param {string} command - Command string
+ * @return {Promise<ProcessResult>} - Return result of { stdout, stderr, code }
+ * @example const result = await execStr("ls -la /");
+ */
+export async function execStr(command: string): Promise<ProcessResult> {
+  const parsed = command.trim().split(' ');
+  return exec(parsed[0], parsed.slice(1));
 }
 
