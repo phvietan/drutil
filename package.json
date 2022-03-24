@@ -1,6 +1,6 @@
 {
   "name": "@drstrain/drutil",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "Util for drstrain",
   "main": "dist/index.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "eslint": "^8.5.0",
     "eslint-config-google": "^0.14.0",
     "ts-mocha": "^8.0.0",
-    "typescript": "^4.5.4",
-    "typedoc": "^0.22.10"
+    "typedoc": "^0.22.10",
+    "typescript": "^4.5.4"
   },
   "directories": {
     "test": "test"

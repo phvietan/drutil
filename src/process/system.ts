@@ -12,8 +12,8 @@ export async function system(
   return new Promise<void>((resolve) => {
     const proc = spawn(command, args);
 
-    proc.stdout.on('data', (data) => console.log(data.toString()));
-    proc.stderr.on('data', (data) => console.log(data.toString()));
+    proc.stdout.on('data', (data) => console.log(data.toString().trim()));
+    proc.stderr.on('data', (data) => console.log(data.toString().trim()));
 
     proc.on('close', () => resolve());
     proc.on('error', () => resolve());
