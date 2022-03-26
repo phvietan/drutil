@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {compareSafe} from '../../src/crypto/compareSafe';
+import { compareSafe } from '../../src/crypto/compareSafe';
 
 const assert = chai.assert;
 

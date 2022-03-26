@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {sleep} from '../../src/action/sleep';
+import { sleep } from '../../src/action/sleep';
 
 const assert = chai.assert;
 

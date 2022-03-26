@@ -1,6 +1,6 @@
 import fs from 'fs';
 import chai from 'chai';
-import {warningLog} from '../../src/logger/warningLog';
+import { warningLog } from '../../src/logger/warningLog';
 
 const assert = chai.assert;
 

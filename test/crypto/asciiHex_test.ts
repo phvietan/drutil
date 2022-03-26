@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {asciiToHex, hexToAscii} from '../../src/crypto/asciiHex';
+import { asciiToHex, hexToAscii } from '../../src/crypto/asciiHex';
 
 const assert = chai.assert;
 

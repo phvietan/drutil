@@ -41,15 +41,3 @@ export async function exec(
     }));
   });
 }
-
-/**
- * Run new process as async with string command only, and return stdout, stderr, code
- * @param {string} command - Command string
- * @return {Promise<ProcessResult>} - Return result of { stdout, stderr, code }
- * @example const result = await execStr("ls -la /");
- */
-export async function execStr(command: string): Promise<ProcessResult> {
-  const parsed = command.trim().split(' ');
-  return exec(parsed[0], parsed.slice(1));
-}
-

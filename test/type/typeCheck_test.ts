@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {isArray, isNumber, isObject, isString} from '../../src/type/typeCheck';
+import { isArray, isNumber, isObject, isString } from '../../src/type/typeCheck';
 
 const assert = chai.assert;
 

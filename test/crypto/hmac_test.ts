@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {hmac} from '../../src/crypto/hmac';
+import { hmac } from '../../src/crypto/hmac';
 
 const assert = chai.assert;
 

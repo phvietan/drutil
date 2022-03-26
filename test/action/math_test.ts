@@ -1,5 +1,5 @@
 import chai from 'chai';
-import {getRandomBetween} from '../../src/action/math';
+import { getRandomBetween } from '../../src/action/math';
 
 const assert = chai.assert;
 

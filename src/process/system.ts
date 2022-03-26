@@ -19,14 +19,3 @@ export async function system(
     proc.on('error', () => resolve());
   });
 }
-
-/**
- * Run new process as async with string command only
- * @param {string} command - Command string
- * @example await systemStr("ls -la /");
- */
-export async function systemStr(command: string): Promise<void> {
-  const parsed = command.trim().split(' ');
-  return system(parsed[0], parsed.slice(1));
-}
-

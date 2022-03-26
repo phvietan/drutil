@@ -1,5 +1,4 @@
 import chai from 'chai';
-import { read } from '../../src/action/read';
 
 const assert = chai.assert;
 
