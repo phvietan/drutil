@@ -1,6 +1,6 @@
 {
   "name": "@drstrain/drutil",
-  "version": "1.1.19",
+  "version": "1.2.0",
   "description": "Util for drstrain",
   "main": "dist/index.js",
   "scripts": {
@@ -17,16 +17,16 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.3.0",
-    "@types/mocha": "^9.0.0",
-    "@types/node": "^17.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.0",
-    "chai": "^4.3.4",
-    "eslint": "^8.5.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.12.0",
     "eslint-config-google": "^0.14.0",
-    "ts-mocha": "^8.0.0",
+    "ts-mocha": "^9.0.2",
     "typedoc": "^0.22.10",
-    "typescript": "^4.5.4"
+    "typescript": "^4.6.3"
   },
   "directories": {
     "test": "test"
