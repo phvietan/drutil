@@ -5,7 +5,7 @@ const assert = chai.assert;
 
 describe('Test system', () => {
   it('should successfully run command', async () => {
-    await system('ls', ['-la']);
+    await system('uname', ['-a']);
     assert(true);
   });
 });

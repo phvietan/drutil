@@ -10,11 +10,7 @@ export async function system(
   args: string[] = [],
 ): Promise<void> {
   return new Promise<void>((resolve) => {
-    const proc = spawn(command, args);
-
-    proc.stdout.on('data', (data) => console.log(data.toString().trim()));
-    proc.stderr.on('data', (data) => console.log(data.toString().trim()));
-
+    const proc = spawn(command, args, { stdio: 'inherit' });
     proc.on('close', () => resolve());
     proc.on('error', () => resolve());
   });
