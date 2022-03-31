@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { COLORS } from './colors';
+import { ConsoleColors } from './consoleColors';
 import { formatDate } from '../date';
 
 /**
@@ -8,12 +8,11 @@ import { formatDate } from '../date';
  *
  * @param {string} msg - Message to be logged to stdout
  * @param {string} fileName - [Optional] Append log message to file <filename>
- * @return {void}
  */
 export function warningLog(msg: string, fileName?: string): void {
   const now = new Date();
   const formattedMsg = `[${formatDate(now)}] ${msg}`;
-  const coloredFormattedMsg = `${COLORS.BgYellow}${COLORS.FgBlack}` + formattedMsg + COLORS.Reset;
+  const coloredFormattedMsg = `${ConsoleColors.BG_YELLOW}${ConsoleColors.FG_BLACK}${formattedMsg}${ConsoleColors.RESET}`;
   console.log(coloredFormattedMsg);
   if (fileName) fs.appendFileSync(fileName, formattedMsg + '\n');
 }

@@ -1,4 +1,4 @@
-export * from './colors';
+export * from './consoleColors';
 export * from './log';
 export * from './successLog';
 export * from './errorLog';

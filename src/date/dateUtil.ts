@@ -14,12 +14,13 @@ export function formatDate(time: Date): string {
 }
 
 /**
- * Calculate days difference between 2 Date object
+ * Calculate the days difference between 2 Date object
+ *
  * @param {Date} a - Date object a
  * @param {Date} b - Date object b
  * @return {number} - A positive number of days difference between 2 Date object
  */
 export function getNumDaysDifference(a: Date, b: Date): number {
-  const between = Math.abs((a as any) - (b as any));
+  const between = Math.abs(Number(a) - Number(b));
   return Math.floor(between / 1000 / 3600 / 24);
 }

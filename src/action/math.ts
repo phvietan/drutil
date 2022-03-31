@@ -1,7 +1,8 @@
 /**
- * Get a random number between 2 numbers [left, right]
- * @param {number} left - Left boundary number
- * @param {number} right - Right boundary number
+ * Get a random number between the range of [left, right]
+ *
+ * @param {number} left - Left boundary of numbers
+ * @param {number} right - Right boundary of numbers
  * @return {number} - A random number between left and right
  */
 export function getRandomBetween(left: number, right: number): number {

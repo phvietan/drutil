@@ -1,5 +1,13 @@
 import { spawn } from 'child_process';
 
+/**
+ * A type for result of process exec
+ *
+ * @param {string} stdout - the string of stdout after exec is finished
+ * @param {string} stderr - the string of stderr after exec is finished
+ * @param {Error?} err - error object if exec has error
+ * @param {number} code - return status code after exec is finished
+ */
 export type ProcessResult = {
   stdout: string;
   stderr: string;
@@ -8,10 +16,11 @@ export type ProcessResult = {
 }
 
 /**
- * Run new process as async with specified arguments, and return stdout, stderr, code
+ * Run new process as async with specified arguments, then return stdout, stderr, error and status code after finished
+ *
  * @param {string} command - Command string
  * @param {string[]} args - Arguments for command
- * @return {Promise<ProcessResult>} - Return result of { stdout, stderr, code }
+ * @return {Promise<ProcessResult>} Result the exec
  */
 export async function exec(
   command: string,

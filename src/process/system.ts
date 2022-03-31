@@ -1,7 +1,8 @@
 import { spawn } from 'child_process';
 
 /**
- * Run new process as async with specified arguments and output to stdout
+ * Run new process as async with specified arguments then show all outputs to stdout
+ *
  * @param {string} command - Command string
  * @param {string[]} args - Arguments for command
  */

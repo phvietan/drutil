@@ -1,15 +1,33 @@
 import dns from 'dns';
 
 /**
+ * Enum for constants of DNS resolve utilities
+ *
+ * @enum {number} DnsResolveConstants
+ * @property DNS_IPV4 - DNS resolve value for ipv4 A record
+ * @property DNS_IPV6 - DNS resolve value for ipv6 AAAA record
+ * @property DNS_IPV4_6 - DNS resolve value for ipv6 AAAA record
+ */
+export enum DnsResolveConstants {
+  IPV4 = 4,
+  IPV6 = 6,
+  IPV4_6 = 0,
+}
+
+/**
  * Resolve DNS of hostname to ipv4
  * In case of error, it returns empty string
  *
  * @param {string} hostname - Hostname to be resolved
- * @return {Promise<string>}
+ * @param {DnsResolveConstants} ipVersion - IP version to ask for dns resolve, default to ipv4
+ * @return {Promise<string>} return promise of ip of hostname
  */
-export async function dnsResolve(hostname: string): Promise<string> {
+export async function dnsResolve(
+  hostname: string,
+  ipVersion: DnsResolveConstants = DnsResolveConstants.IPV4,
+): Promise<string> {
   return new Promise<string>((resolve) => {
-    dns.lookup(hostname, 4, (err, addr) => {
+    dns.lookup(hostname, ipVersion, (err, addr) => {
       if (err) resolve('');
       resolve(addr);
     });

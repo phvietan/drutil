@@ -2,8 +2,9 @@ import { isHex } from '../type/isHex';
 
 /**
  * Convert string hex to string ascii
+ *
  * @param {string} hex - Hex encoded string that needs to be converted to ascii
- * @return {string} - Ascii string result
+ * @return {string} Ascii string result
  */
 export function hexToAscii(hex: string): string {
   if (!isHex(hex)) {
@@ -15,8 +16,9 @@ export function hexToAscii(hex: string): string {
 
 /**
  * Convert string ascii to hex encoded string
+ *
  * @param {string} ascii - Ascii string that needs to be converted to hex
- * @return {string} - Hex encoded string result
+ * @return {string} Hex encoded string result
  */
 export function asciiToHex(ascii: string): string {
   const inputBuf = Buffer.from(ascii, 'ascii');
