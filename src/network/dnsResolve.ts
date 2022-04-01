@@ -18,7 +18,7 @@ export enum DnsResolveConstants {
  *
  * @function
  * @param {string} hostname - Hostname to be resolved
- * @param {DnsResolveConstants} ipVersion - IP version to ask for dns resolve, default to ipv4
+ * @param {DnsResolveConstants} ipVersion - IP version to ask for dns resolve [DEFAULT = DnsResolveConstants.IPV4]
  * @return {Promise<string>} return promise of ip of hostname
  */
 export async function dnsResolve(

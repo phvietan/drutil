@@ -2,7 +2,7 @@
  * Enum for constants of network drutil utilities
  *
  * @enum {string} ConsoleColors
- * @property RESET - Reset current color to default
+ * @property RESET - Reset current color to default console color
  * @property FG_BLACK - Set current color to have foreground black
  * @property FG_WHITE - Set current color to have foreground white
  * @property BG_RED - Set current color to have background red

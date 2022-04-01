@@ -7,7 +7,7 @@ import { formatDate } from '../date';
  * @function
  * @param {string} msg - Message to be logged to stdout
  * @param {string} fileName - [Optional] Append log message to file <filename>
- * @param {boolean} toStdout - [Optional] Should print to stdout or not, default is true
+ * @param {boolean} toStdout - [Optional] Should print to stdout or not [DEFAULT = true]
  */
 export function log(msg: string, fileName?: string, toStdout: boolean = true): void {
   const now = new Date();

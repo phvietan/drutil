@@ -6,7 +6,7 @@ import crypto from 'crypto';
  * @function
  * @param {string} secret - Secret key hex encoded
  * @param {string} content - Content utf-8 encoded
- * @param {string} algorithm - The algorithm to create hmac, default uses sha256
+ * @param {string} algorithm - The algorithm to create hmac [DEFAULT = sha256]
  * @return {string} - HMAC result that encoded with hex
  */
 export function hmac(secret: string, content: string, algorithm: string = 'sha256'): string {
