@@ -20,7 +20,7 @@ export type ProcessResult = {
  * Run new process as async with specified arguments, then return stdout, stderr, error and status code after finished
  *
  * @param {string} command - Command string
- * @param {string[]} args - Arguments for command
+ * @param {string[]} args - Arguments for command [DEFAULT=[]]
  * @return {Promise<ProcessResult>} Result the exec
  */
 export async function exec(

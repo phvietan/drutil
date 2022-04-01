@@ -8,7 +8,7 @@ import { formatDate } from '../date';
  *
  * @function
  * @param {string} msg - Message to be logged to stdout
- * @param {string} fileName - [Optional] Append log message to file <filename>
+ * @param {?string} fileName - [Optional] Append log message to file <filename>
  */
 export function warningLog(msg: string, fileName?: string): void {
   const now = new Date();

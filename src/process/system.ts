@@ -5,7 +5,7 @@ import { spawn } from 'child_process';
  *
  * @function
  * @param {string} command - Command string
- * @param {string[]} args - Arguments for command
+ * @param {string[]} args - Arguments for command [DEFAULT=[]]
  */
 export async function system(
   command: string,
