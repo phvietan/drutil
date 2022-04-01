@@ -3,6 +3,7 @@ import { isHex } from '../type/isHex';
 /**
  * Convert string hex to string ascii
  *
+ * @function
  * @param {string} hex - Hex encoded string that needs to be converted to ascii
  * @return {string} Ascii string result
  */
@@ -17,6 +18,7 @@ export function hexToAscii(hex: string): string {
 /**
  * Convert string ascii to hex encoded string
  *
+ * @function
  * @param {string} ascii - Ascii string that needs to be converted to hex
  * @return {string} Hex encoded string result
  */

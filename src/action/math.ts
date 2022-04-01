@@ -1,6 +1,7 @@
 /**
  * Get a random number between the range of [left, right]
  *
+ * @function
  * @param {number} left - Left boundary of numbers
  * @param {number} right - Right boundary of numbers
  * @return {number} - A random number between left and right

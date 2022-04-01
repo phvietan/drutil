@@ -3,6 +3,7 @@ import crypto from 'crypto';
 /**
  * Compare 2 strings a and b with time safety
  *
+ * @function
  * @param {string} a - First string to compare
  * @param {string} b - Second string to compare
  * @return {boolean} True/False depends on whether a equals b

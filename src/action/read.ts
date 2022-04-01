@@ -8,6 +8,7 @@ const rl = readline.createInterface({
 /**
  * Ask user and get user's input from stdin
  *
+ * @function
  * @param {?string} inputQuestion - Optional question to be appeared before promt user's input
  * @return {Promise<string>} User's answer as string
  */

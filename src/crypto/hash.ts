@@ -3,6 +3,7 @@ import crypto from 'crypto';
 /**
  * Calculate hash(content[, algorithm = sha256])
  *
+ * @function
  * @param {string} content - Content utf-8 encoded
  * @param {string} algorithm - The hash algorithm, default uses sha256
  * @return {string} Hash result that encoded with hex

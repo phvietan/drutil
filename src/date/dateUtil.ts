@@ -1,8 +1,10 @@
 /**
  * Reformat javascript Date to drutil convention
  * For example: Convert javascript Date to "26-12-2021 13:21"
+ *
+ * @function
  * @param {Date} time - Date object to convert
- * @return {string} - drutil time convention
+ * @return {string} - Drutil time convention
  */
 export function formatDate(time: Date): string {
   const day = time.getDate();
@@ -16,6 +18,7 @@ export function formatDate(time: Date): string {
 /**
  * Calculate the days difference between 2 Date object
  *
+ * @function
  * @param {Date} a - Date object a
  * @param {Date} b - Date object b
  * @return {number} - A positive number of days difference between 2 Date object

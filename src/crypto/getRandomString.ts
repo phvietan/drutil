@@ -3,6 +3,7 @@ import crypto from 'crypto';
 /**
  * Generate random hex string with specified length
  *
+ * @function
  * @param {number} len - Length of the generated random string
  * @return {string} Return a random hex string with specified length
  */

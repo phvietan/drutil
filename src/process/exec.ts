@@ -3,6 +3,7 @@ import { spawn } from 'child_process';
 /**
  * A type for result of process exec
  *
+ * @function
  * @param {string} stdout - the string of stdout after exec is finished
  * @param {string} stderr - the string of stderr after exec is finished
  * @param {Error?} err - error object if exec has error

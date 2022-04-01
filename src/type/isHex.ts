@@ -2,6 +2,8 @@ import { isString } from './typeCheck';
 
 /**
  * Check if param is hex string or not
+ *
+ * @function
  * @param {string} value - Param to check if it is hex encoded string
  * @return {boolean} - True if param is a hex encoded string
  */

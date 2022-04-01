@@ -6,6 +6,7 @@ import { formatDate } from '../date';
  * Log red error message to stdout and optionally log to a file
  * In case of logging to file, color will not be appended
  *
+ * @function
  * @param {string} msg - Message to be logged to stdout
  * @param {string} fileName - [Optional] Append log message to file <filename>
  */
