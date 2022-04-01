@@ -4,8 +4,8 @@ import dns from 'dns';
  * Enum for constants of DNS resolve utilities
  *
  * @enum {number} DnsResolveConstants
- * @property DNS_IPV4 - DNS resolve value for ipv4 A record
- * @property DNS_IPV6 - DNS resolve value for ipv6 AAAA record
+ * @property IPV4 - DNS resolve value for ipv4 A record
+ * @property IPV6 - DNS resolve value for ipv6 AAAA record
  */
 export enum DnsResolveConstants {
   IPV4 = 4,
