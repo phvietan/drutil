@@ -5,3 +5,4 @@ copy_docs.sh
 .eslintrc.js
 src
 .github
+.npmrc
