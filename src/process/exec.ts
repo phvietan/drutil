@@ -29,6 +29,12 @@ export async function exec(
 ): Promise<ProcessResult> {
   return new Promise<ProcessResult>((resolve) => {
     const proc = spawn(command, args);
+    function sigintHandler() {
+      const pid = proc.pid || 0;
+      console.log(`Received SIGINT, killing process [pid=${pid} command=${command}]`);
+      proc.kill('SIGINT');
+    }
+    process.on('SIGINT', sigintHandler);
 
     let stdout = '';
     let stderr = '';
@@ -37,17 +43,21 @@ export async function exec(
     proc.stderr.on('data', (data) => stderr += data);
 
     proc.on('close', (code) => {
+      process.removeListener('SIGINT', sigintHandler);
       resolve({
         stdout,
         stderr,
         code: code || 0,
       });
     });
-    proc.on('error', (err) => resolve({
-      err,
-      stdout,
-      stderr,
-      code: 0,
-    }));
+    proc.on('error', (err) => {
+      process.removeListener('SIGINT', sigintHandler);
+      resolve({
+        err,
+        stdout,
+        stderr,
+        code: 0,
+      });
+    });
   });
 }

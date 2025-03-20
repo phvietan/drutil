@@ -13,7 +13,20 @@ export async function system(
 ): Promise<void> {
   return new Promise<void>((resolve) => {
     const proc = spawn(command, args, { stdio: 'inherit' });
-    proc.on('close', () => resolve());
-    proc.on('error', () => resolve());
+    function sigintHandler() {
+      const pid = proc.pid || 0;
+      console.log(`Received SIGINT, killing process [pid=${pid} command=${command}]`);
+      proc.kill('SIGINT');
+    }
+    process.on('SIGINT', sigintHandler);
+
+    proc.on('close', () => {
+      process.removeListener('SIGINT', sigintHandler);
+      resolve();
+    });
+    proc.on('error', () => {
+      process.removeListener('SIGINT', sigintHandler);
+      resolve();
+    });
   });
 }
